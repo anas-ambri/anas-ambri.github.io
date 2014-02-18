@@ -3,7 +3,6 @@ layout: post
 title:  "Interviews are NP hard"
 date:   2014-02-15 15:22:34
 categories: blog tech job
-published: false
 ---
 
 An interesting discussion today at Ladies Learning Code brought me up to the following fact:
