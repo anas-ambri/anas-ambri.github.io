@@ -63,6 +63,7 @@ module Jekyll
     def cached_response(api_params)
       return nil if @cache_disabled
       cache_file = cache_file_for(api_params)
+      text = File.read(cache_file) if File.exist?(cache_file)
       JSON.parse(File.read(cache_file)) if File.exist?(cache_file)
     end
 
