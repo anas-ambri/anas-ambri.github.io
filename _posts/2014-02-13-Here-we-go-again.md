@@ -2,7 +2,8 @@
 layout: post
 title:  "Here we go again!"
 date:   2014-02-13 16:13:36
-categories: blog non-tech
+categories: blog
+tags: non-tech
 ---
 
 I always found blogging to be an intriguing activity. I am sure it had something to do with my tendency to inflict my opinion on people, though, being the eldest child, drawing attention to myself is certainly one of my favorite pastimes. Since it created the perfect mix of both, it shouldn't come as a surprise that I always wanted to write blog posts.
@@ -11,7 +12,7 @@ It effectively started with [the Abstract Eternity](http://theabstracteternity.w
 
 Which brings us to the main topic of this post: what I am planning to do on this new blog. Well, obviously, my goal would be to write frequently about interesting stuff. In order to avoid the same smugness that transpired so many times from my writings, I will make sure to develop enough knowledge about said subject before jumping on making conclusions.
 
-Some of you might find the technical stuff interesting, as I will be talking about the software that I write here (yep, not only I have opinions, I also get the chance to back them up with code). Some others will probably enjoy the thoughts I will be gathering here about the profession, the challenges of being a recent grad, and anything that crosses my mind, really.
+Some of you might find the technical stuff interesting, as I will be talking about the software that I write here (yep, not only I have opinions, I also get the chance to back them up with code). Some others will probably enjoy the thoughts I will be gathering here about software engineering, the challenges of being a recent grad, and anything that crosses my mind, really.
 
 My hope is that you will be enjoying the ride as much as I will, so let's not forget that:
 
