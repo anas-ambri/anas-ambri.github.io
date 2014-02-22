@@ -55,7 +55,8 @@ While this code seems familiar to any C++ or Java programmer, this is very unidi
 ```javascript
 var indexBest = 0;
 events.forEach(function(event, index){
-    if( actionPriority[events[indexBest].action] > actionPriority[event.action] ){
+    var actionbest = events[indexBest].action;
+    if( actionPriority[actionBest] > actionPriority[event.action] ){
         indexBest = i;
     }
 });
