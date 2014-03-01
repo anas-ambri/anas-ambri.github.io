@@ -1,3 +1,28 @@
-name: Where std_badalloc started
-markdown: redcarpet
-pygments: true
+title:            Where std::bad_alloc started
+description:      A tale of a recent grad
+url:              http://verybadalloc.com
+signoff:          Anas Ambri
+disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
+google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+
+links:
+  - name:         About
+    url:          /about
+  - name:         Resume
+    url:          /downloads/Ambri_Anas_resume.pdf
+  - name:         Email
+    url:          mailto:anas.ambri@gmail.com
+    external:     true
+  - name:         Github
+    url:          http://github.com/anas-ambri
+    external:     true
+  - name:         RSS
+    url:          /feed.xml
+
+pygments:         true
+permalink:        pretty
+markdown:         redcarpet
+redcarpet:
+  extensions:
+    - smart
