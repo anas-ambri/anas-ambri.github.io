@@ -17,8 +17,12 @@ links:
   - name:         Github
     url:          http://github.com/anas-ambri
     external:     true
+  - name:         Twitter
+    url:          http://twitter.com/AnasAmbri
+    external:     true
   - name:         RSS
-    url:          /feed.xml
+    url:          http://verybadalloc.com/feed.xml
+    external:     true
 
 pygments:         true
 permalink:        pretty

@@ -1,0 +1,7 @@
+<div class="block">
+  {% for link in site.links %}
+    {% if link.external %}
+  <a target="_blank" class="main" href="{{ link.url }}">{{ link.name }}</a>
+    {% endif %}
+  {% endfor %}
+</div>

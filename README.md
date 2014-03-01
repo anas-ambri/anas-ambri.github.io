@@ -3,6 +3,9 @@ anas-ambri.github.io
 
 Website for verybadalloc.com
 
+## Theme
+This website uses the [Scribble theme](https://github.com/muan/scribble) from [Mu-An Chiou](https://github.com/muan).
+
 ## Thor Jekyll
 The script `jekyll.thor` was developed by [Jonas Forsberg](http://jonasforsberg.se/2012/12/28/create-jekyll-posts-from-the-command-line), and can be used as follows:
 
