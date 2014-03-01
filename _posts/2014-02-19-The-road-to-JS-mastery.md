@@ -42,7 +42,8 @@ var actionPriority = {
 var indexBest = 0;
 for(var i = 0; i<events.length; ++i){
     var event = events[i];
-    if( actionPriority[events[indexBest].action] > actionPriority[event.action] ){
+    var actionBest = events[indexBest].action;
+    if( actionPriority[actionBest] > actionPriority[event.action] ){
         indexBest = i;
     }
 }
@@ -54,7 +55,8 @@ While this code seems familiar to any C++ or Java programmer, this is very unidi
 ```javascript
 var indexBest = 0;
 events.forEach(function(event, index){
-    if( actionPriority[events[indexBest].action] > actionPriority[event.action] ){
+    var actionbest = events[indexBest].action;
+    if( actionPriority[actionBest] > actionPriority[event.action] ){
         indexBest = i;
     }
 });
@@ -69,7 +71,9 @@ How does reduce work? As its name suggests, it reduces a lot of data into one el
 ```javascript
 var best = _.reduce(events, function(best, event, index){
     var currentRank =  actionPriority[event.action];
-    best = ( best.actionRank > currentRank)? {index: index, actionRank: currentRank}:best;
+    best = ( best.actionRank > currentRank)? 
+            {index: index, actionRank: currentRank} : 
+            best;
 }, {
     index:0,
     actionRank: actionPriority[events[index].action])
@@ -81,3 +85,7 @@ var best = _.reduce(events, function(best, event, index){
 And here lies a central difference: instead of updating just the `indexBest` variable, we are pretty much constructing a new reduced object every time. Note that this object contains not only the answer to our question (what index are we looking for?), but also any information we need to make the reduction (in this case, the `actionRank`).
 
 This brings us back to the original idea behind this post: in order to learn a new language, one has to learn to think in the tools provided by the language. Because JS is very malleable, developers can still continue to write in their previous language's paradigm. No wonder it is so hard to become good at Javascript!
+
+
+
+PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>
