@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "My automatically generated personality results"
+title: "Personality tests are the best"
 categories: blog
 tags: non-tech personality hiring
 published: false
