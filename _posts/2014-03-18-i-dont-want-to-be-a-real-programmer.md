@@ -38,3 +38,4 @@ Maybe I am just rationalizing the harsh truth, but I feel that one cannot become
 Me? I am just gonna keep doing my thing: trying to squeeze as much code off those few hours. Plus, being a Real Programmer is overrated; apparently, the hottest new thing now is to [be Lean](http://en.wikipedia.org/wiki/Lean_software_development).
 
 
+PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>
