@@ -5,7 +5,7 @@ categories: blog
 tags: non-tech resolutions
 ---
 
-*EDIT*: You can discuss this on [Hacker News](https://news.ycombinator.com/item?id=7427286).
+**EDIT**: You can discuss this post on [Hacker News](https://news.ycombinator.com/item?id=7427286).
 
 Today, I came across this [blog post](http://www.nicholascloud.com/2014/03/how-to-be-a-sane-programmer/) by Nicholas Cloud, where he makes the case of branching out of programming as a means of becoming a better programmer. According to him, playing with the hottest new technology or language won't make you a better programmer; it will simply allow you to learn new tools. This very fact resonated quite a lot with me, considering how frustrating it can be to [see](http://componentjs.com/) [so](https://www.meteor.com/) [many](http://brackets.io/) [cool](http://pazguille.github.io/voix/) [things](http://noflojs.org/) [being](http://developer.android.com/wear/index.html) [developed](http://developer.marvel.com/), and not having the chance to participate in them.
 
