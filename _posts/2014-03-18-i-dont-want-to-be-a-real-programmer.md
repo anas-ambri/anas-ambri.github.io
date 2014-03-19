@@ -31,4 +31,8 @@ For most of the past three years, I dreamed of becoming a real programmer. And w
 However, the more time I would put into learning new things, the more I would be convinced of my own demise. While I was trying to figure out how to use CSS to make [a client's website half decent](http://www.drkharma.com/ribosoft/), others were making [crazy-ass experiments](http://lab.hakim.se/) that involved more browser-specific tricks than all of jQuery. While I was battling with Javascript's syntax errors, others were redefining the way we would write [client-side apps](http://angularjs.org/). Nothing I could do would change the (damn) truth: whatever the number of hours I would put in my quest, I would never even come close to being a Real Programmer.
 
 ##The epilogue
-Maybe I am just rationalizing the harsh truth, but I feel that one cannot become a Real Programmer. For sure, they are plenty of Real Programmers out there, who easily agree to the 80+ hours/week workload. My feeling is that these Real Programmers are satisfied with committing their lives to programming, which is something I utterly respect. 
+Maybe I am just rationalizing the harsh truth, but I feel that one cannot become a Real Programmer. For sure, they are plenty of Real Programmers out there, who easily agree to the 80+ hours/week workload. My feeling is that these people are satisfied with committing their lives to programming, which is something I utterly respect.
+
+Me? I am just gonna keep doing my thing: trying to squeeze as much code off those few hours. Plus, being a Real Programmer is overrated; apparently, the hottest new thing now is to [be Lean](http://en.wikipedia.org/wiki/Lean_software_development).
+
+
