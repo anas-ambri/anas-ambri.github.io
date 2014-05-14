@@ -8,7 +8,7 @@ tags: on-the-road, discipline
 While going on my road trip, I decided to take a small laptop with me to do some programming/news browing. While the jury is still out there on whether that was a good idea or not, I thought I should write about the experience of using my notebook for software development during the trip so far. The machine in question is a 10"-screen 5-year old Internet-less [Dell notebook](http://www.dell.com/ca/p/inspiron-mini1012/pd), with a complete fresh Ubuntu 13.04 install. The title of this post is inspired by the fact that, like in [constraint programming](http://en.wikipedia.org/wiki/Constraint_programming), coding while on the road is defined mostly by what you can't do. (Hint: lack of Internet changes *everything*)
 
 ##The most basic need
-<img src="internet_maslow.png" />
+<img src="/images/internet_maslow.png" />
 You will never understand how scarce Internet access is until you are in a car for 8 hours a day. Wi-fi on campgrounds and motels will be inconsistent at best, so your only hope will lie on coffee-shops (Tim Hortons', in Canada). Typing `apt-get install` or `npm install` wil become a holy experience, where you are constantly praying to the Wi-fi gods that your download will succeed. Git pushes will be in themselves moments of celebration, independently of the quality of the code submitted. And let's not even mention those nights where you will leave your laptop on cloning a repo so that you could use it the next day.
 
 Knowing that you might never be able to install your dependencies means that: a) you would need to choose them wisely, b) you need to be able to continue working even if they are not installed. This changes the way you program completely.
