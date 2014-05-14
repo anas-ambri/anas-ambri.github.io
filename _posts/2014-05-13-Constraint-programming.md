@@ -10,6 +10,7 @@ While going on my road trip, I decided to take a small laptop with me to do some
 
 ##The most basic need
 <img src="/images/internet_maslow.png" />
+
 You will never understand how scarce Internet access is until you are in a car for 8 hours a day. Wi-fi on campgrounds and motels will be inconsistent at best, so your only hope will lie on coffee-shops (Tim Hortons', in Canada). Typing `apt-get install` or `npm install` wil become a holy experience, where you are constantly praying to the Wi-fi gods that your download will succeed. Git pushes will be in themselves moments of celebration, independently of the quality of the code submitted. And let's not even mention those nights where you will leave your laptop on cloning a repo so that you could use it the next day.
 
 Knowing that you might never be able to install your dependencies means that: a) you would need to choose them wisely, b) you need to be able to continue working even if they are not installed. This changes the way you program completely.
