@@ -24,7 +24,7 @@ links:
     url:          http://verybadalloc.com/feed.xml
     external:     true
 
-pygments:         true
+highlighter:      true
 permalink:        pretty
 markdown:         redcarpet
 redcarpet:
