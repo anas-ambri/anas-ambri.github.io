@@ -1,8 +1,9 @@
---
+---
 layout: post
-title: Wrapping up the new iOS 8 CLLocationManager
+title: "Abstracting iOS 8 new Location Manager"
 categories: tech
 tags: iOS 8
+ -
 ---
 
 In the new iOS release, [CLLocationManager](https://developer.apple.com/library/prerelease/iOS/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html), the class responsible for retrieving location, gets a major overhaul, by introducing specific permission methods. While you can get some details on these changes by looking at the [documentation](https://developer.apple.com/library/prerelease/iOS/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html), I wanted to introduce a wrapper class we are using at Guestful for wrapping all the Location-retrieval logic, especially the backward-compatibility code. This solution is based off Michael Babiy's [code](http://www.michaelbabiy.com/cllocationmanager-singleton/), which exposes a method for enabling a Singleton CLLocationManager class. The method exposed here takes this even further, by allowing any number of "observers" on this class.
@@ -10,7 +11,7 @@ In the new iOS release, [CLLocationManager](https://developer.apple.com/library/
 ##The Code
 We start off by exposing a protocol for our observers to implement, in our `GFLocationManager.h` file:
 
-```objective-c
+```objc
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 
@@ -33,7 +34,7 @@ The interface for our GFLocationManager is pretty straightforward: we provide wi
 
 On the `GFLocationManager.m` side, we initiate our `manager` by following the new iOS 8 requirements, and simply broadcast any new location updates to the observers:
 
-```objective-c
+```objc
 #import "GFLocationManager.h"
 
 @interface GFLocationManager()
@@ -128,14 +129,14 @@ Note a few things:
 ##How will you use this?
 - In your viewController, start by implementing the `GFLocationManagerDelegate` protocol:
 
-```objective-c
+```objc
 - (void) locationManagerDidUpdateLocation:(CLLocation *)location {
     self.currentLocation = location;
 }
 ```
 - Then, you can add/remove `self` in the `viewWillAppear` and `viewWillDisappear` methods of your viewController:
 
-```objective-c
+```objc
 -(void) viewWillAppear:(BOOL)animated
 {
     [[GFLocationManager sharedInstance] addLocationManagerDelegate:self];
