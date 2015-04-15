@@ -61,8 +61,6 @@ static int errorCount = 0;
 - (instancetype) init {
     self = [super init];
     if(self) {
-        _manager = [[CLLocationManager alloc] init];
-        _manager.delegate = self;
         
 	//Must check authorizationStatus before initiating a CLLocationManager
         CLAuthorizationStatus status = [CLLocationManager authorizationStatus];
