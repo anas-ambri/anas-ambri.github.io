@@ -2,7 +2,6 @@
 layout: post
 title: "State of UI Testing in Android"
 categories: blog
-published: true
 tags: Android, Testing, UI
 ---
 
