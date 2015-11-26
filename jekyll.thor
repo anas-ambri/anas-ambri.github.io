@@ -24,6 +24,5 @@ class Jekyll < Thor
       post.puts "---"
     end
 
-    system(options[:editor], filename)
   end
 end
