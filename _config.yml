@@ -1,14 +1,20 @@
-title:            Where std::bad_alloc started
-description:      A tale of a recent grad
+title:            Anas Ambri's website
+description:      A tale of an aspring mobile developer
 url:              http://verybadalloc.com
 signoff:          Anas Ambri
-disqus_shortname: # disqus comment thread for post header options. ( leave blank if unwanted. )
+disqus_shortname: verybadalloc
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
-google_analytics: # set tracking, remove from /javascripts/basic.js if unwanted.
+google_analytics: UA-71024069-1
 
 links:
   - name:         About
     url:          /about
+  - name:         Portfolio
+    url:          /portfolio
+  - name:         Blog
+    url:          /blog
+  - name:         Presentations
+    url:          /presentations
   - name:         Resume
     url:          /downloads/Ambri_Anas_resume.pdf
   - name:         Email

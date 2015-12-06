@@ -17,6 +17,7 @@ class Jekyll < Thor
       post.puts "---"
       post.puts "layout: post"
       post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
+      post.puts "comments: true"
       post.puts "categories: blog"
       post.puts "published: false"
       post.puts "tags:"
