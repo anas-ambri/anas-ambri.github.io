@@ -36,6 +36,3 @@ However, the more time I would put into learning new things, the more I would be
 Maybe I am just rationalizing the harsh truth, but I feel that one cannot become a Real Programmer. For sure, they are plenty of Real Programmers out there, who easily agree to the 80+ hours/week workload. My feeling is that these people are satisfied with committing their lives to programming, which is something I utterly respect.
 
 Me? I am just gonna keep doing my thing: trying to squeeze as much code off those few hours. Plus, being a Real Programmer is overrated; apparently, the hottest new thing now is to [be Lean](http://en.wikipedia.org/wiki/Lean_software_development).
-
-
-PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>

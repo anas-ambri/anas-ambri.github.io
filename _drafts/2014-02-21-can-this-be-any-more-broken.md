@@ -6,6 +6,7 @@ published: false
 tags:
  -
 ---
+
 Recently, I was developed a very serious disease. Nothing too serious, but, among its symptoms, was a very high intolerance to horrible design, eye bleeding when interacting with non-functional systems, and a raise in heart beat when witnessing the crumbling of a system.
 
 After checking up with a series of doctors, it turned out that this disease was simply an allergy to broken things, more commonly known under the name 'this-is-broken-isis'. First discovered by the marketing genius Seth Godin, its symptoms can range from the need to scratch every inch^2 of your itchy skin, to the need to 'transpercer one's eyes'.

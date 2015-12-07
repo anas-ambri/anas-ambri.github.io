@@ -85,7 +85,3 @@ var best = _.reduce(events, function(best, event, index){
 And here lies a central difference: instead of updating just the `indexBest` variable, we are pretty much constructing a new reduced object every time. Note that this object contains not only the answer to our question (what index are we looking for?), but also any information we need to make the reduction (in this case, the `actionRank`).
 
 This brings us back to the original idea behind this post: in order to learn a new language, one has to learn to think in the tools provided by the language. Because JS is very malleable, developers can still continue to write in their previous language's paradigm. No wonder it is so hard to become good at Javascript!
-
-
-
-PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>

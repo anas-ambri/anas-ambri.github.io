@@ -20,7 +20,3 @@ My hope is that you will be enjoying the ride as much as I will, so let's not fo
     <span class="text">It's the journey, not the destination, that really matters</span><br/>
     <span class="source">- Someone who obviously didn't have to go through airport security checks</span>
 </blockquote>
-
-
-
-PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>

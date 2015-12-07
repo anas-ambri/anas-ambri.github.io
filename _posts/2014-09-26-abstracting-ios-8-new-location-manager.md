@@ -150,7 +150,3 @@ Now, everytime the location is retrieved, the `locationManagerDidUpdateLocation`
 
 ###Improvements
 Introduce time-based refreshing of the location: if `addLocationManagerDelegate` has not been called in 5 min, schedule it again.
-
-
-
-PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>

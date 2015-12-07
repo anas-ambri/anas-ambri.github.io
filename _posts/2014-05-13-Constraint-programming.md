@@ -37,7 +37,3 @@ This one goes without saying: the fact that the notebook's battery can't hold up
 ##Epilogue
 The moral of the story is that, having the most powerful development environment is not always necessary when writing software. My general feeling is that you will also write better code, simply because you will constantly be reminded that everything you always relied on is gone.
 And yes, you have no idea how difficult it was to get this post uploaded...
-
-
-
-PS: I know I am not supposed to tell you what to do, but, you know, you could always <a href="https://twitter.com/AnasAmbri">follow me on Twitter</a>
