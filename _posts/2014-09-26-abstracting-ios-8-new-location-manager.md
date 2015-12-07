@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Abstracting iOS 8 new Location Manager"
-categories: tech
+categories: ios
 tags: iOS 8
  -
 ---

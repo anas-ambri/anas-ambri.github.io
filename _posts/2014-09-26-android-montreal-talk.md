@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Android Montreal talk - Groovy on Android"
-categories: blog
+categories: presentations
 tags: Android, talk
  -
 ---

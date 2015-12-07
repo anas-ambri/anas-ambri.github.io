@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Intro to Python - Concordia University"
-categories: blog
+categories: presentations
 tags: Android, talk
  -
 ---
