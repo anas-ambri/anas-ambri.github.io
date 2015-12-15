@@ -1,12 +1,12 @@
 ---
 layout: index
-title: ALL THE BLOG POSTS
+title: ALL THE PRESENTATIONS
 ---
 
-<h3>BLOG</h3>
+<h3>Presentations</h3>
 <ul class="posts">
   {% for category in site.categories %}
-  {% if category[0] == 'blog' %}
+  {% if category[0] == 'presentations' %}
   {% for posts in category %}
   {% for post in posts %}
   {% if post.url %} {% comment %} // To remove a first empty post {% endcomment %}

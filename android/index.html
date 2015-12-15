@@ -1,12 +1,12 @@
 ---
 layout: index
-title: ALL THE BLOG POSTS
+title: ALL THE ANDROID POSTS
 ---
 
-<h3>BLOG</h3>
+<h3>Android</h3>
 <ul class="posts">
   {% for category in site.categories %}
-  {% if category[0] == 'blog' %}
+  {% if category[0] == 'android' %}
   {% for posts in category %}
   {% for post in posts %}
   {% if post.url %} {% comment %} // To remove a first empty post {% endcomment %}
