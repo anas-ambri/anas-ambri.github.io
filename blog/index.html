@@ -1,13 +1,20 @@
 ---
 layout: index
-title: ALL THE POSTS
+title: ALL THE BLOG POSTS
 ---
 
+<h3>BLOG</h3>
 <ul class="posts">
-  {% for post in site.posts %}
+  {% for category in site.categories %}
+  {% if category == 'blog' %}
+  {% for posts in category %}
+  {% for post in posts %}
   <li>
     <small class="datetime muted" data-time="{{ post.date }}">{{ post.date | date_to_string }} </small>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
   {% endfor %}
 </ul>
