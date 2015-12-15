@@ -7,28 +7,33 @@ facebook_appid:   # appid for like button, remove from /_includes/share.html if 
 google_analytics: UA-71024069-1
 
 links:
-  - name:         About
-    url:          /about
   - name:         Portfolio
     url:          /portfolio
+    top:	  true	  
   - name:         Blog
     url:          /blog
+    top:	  true	  
   - name:         Presentations
     url:          /presentations
-  - name:         Resume
-    url:          /downloads/Ambri_Anas_resume.pdf
+    top:	  true	  
+  - name:         Android
+    url:          /android
+    top:	  true	  
+  - name:         iOS
+    url:          /ios
+    top:	  true	  
   - name:         Email
     url:          mailto:anas.ambri@gmail.com
-    external:     true
+    bottom:       true
   - name:         Github
     url:          http://github.com/anas-ambri
-    external:     true
+    bottom:       true
   - name:         Twitter
     url:          http://twitter.com/AnasAmbri
-    external:     true
-  - name:         RSS
-    url:          http://verybadalloc.com/feed.xml
-    external:     true
+    bottom:       true
+  - name:         Resume
+    url:          /downloads/Ambri_Anas_resume.pdf
+    bottom:	  true
 
 permalink:        pretty
 markdown:         redcarpet

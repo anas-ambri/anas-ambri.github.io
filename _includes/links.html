@@ -1,6 +1,6 @@
 <div class="block">
   {% for link in site.links %}
-  {% if link.external == null %}
+  {% if link.top %}
     <a target="_top" class="main" href="{{ link.url }}">{{ link.name }}</a>
     {% endif %}
   {% endfor %}
