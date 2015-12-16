@@ -3,6 +3,7 @@ layout: post
 title: "Saving Parse objects in order"
 categories: ios
 published: false
+disqus: y
 tags: ios Parse 
 ---
 

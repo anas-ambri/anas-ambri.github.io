@@ -20,6 +20,7 @@ class Jekyll < Thor
       post.puts "comments: true"
       post.puts "categories: blog"
       post.puts "published: false"
+      post.puts "disqus: n"
       post.puts "tags:"
       post.puts " -"
       post.puts "---"

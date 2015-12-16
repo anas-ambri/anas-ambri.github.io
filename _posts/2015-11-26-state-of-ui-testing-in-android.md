@@ -3,6 +3,7 @@ layout: post
 title: "State of UI Testing in Android"
 categories: blog
 tags: Android, Testing, UI
+disqus: y
 ---
 
 Today, I will be giving a talk on MVP (Model-View-Presenter) on Android. While preparing the presentation, I came with a bunch of memes that describe, in my humble opinion, the state of UI testing in Android.

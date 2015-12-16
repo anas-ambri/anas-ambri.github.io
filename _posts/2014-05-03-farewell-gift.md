@@ -2,6 +2,7 @@
 layout: post
 title: Open-source away
 categories: blog
+disqus: y
 tags: tech, non-tech, work
 ---
 

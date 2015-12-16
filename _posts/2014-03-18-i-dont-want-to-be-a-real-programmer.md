@@ -3,6 +3,7 @@ layout: post
 title: "I don't want to be a Real Programmer"
 categories: blog
 tags: non-tech resolutions
+disqus: y
 ---
 
 **EDIT**: You can discuss this post on [Hacker News](https://news.ycombinator.com/item?id=7427286).

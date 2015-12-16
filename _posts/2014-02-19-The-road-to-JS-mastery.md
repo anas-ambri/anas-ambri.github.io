@@ -3,6 +3,7 @@ layout: post
 title:  "The road to Javascript mastery"
 date:   2014-02-19 13:24:43
 categories: blog
+disqus: y
 tags: functional-programming nodejs JS
 ---
 

@@ -28,9 +28,6 @@ links:
   - name:         Twitter
     url:          http://twitter.com/AnasAmbri
     bottom:       true
-  - name:         Resume
-    url:          /downloads/Ambri_Anas_resume.pdf
-    bottom:	  true
 
 permalink:        pretty
 markdown:         redcarpet
