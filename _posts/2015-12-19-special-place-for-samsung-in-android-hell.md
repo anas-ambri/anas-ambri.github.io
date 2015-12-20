@@ -9,7 +9,7 @@ tags:
  -
 ---
 
-**Disclaimer**: if you are here just because you heard someone is bashing Samsung, scroll to the bottom.
+**Disclaimer**: if you are here just because you heard someone is bashing Samsung, scroll to the bottom. Also, you came to the right place.
 
 If you are using the support appcompat library (and, of course you are), you might have seen the following stack trace on Crashlytics, coming from Samsung 4.2.2 devices:
 
