@@ -360,3 +360,8 @@ img {
   margin-left: -440px; }
 .paging .right {
   margin-left: 420px; }
+
+.figure {
+    border-radius:50%;
+    overflow:hidden;
+}
