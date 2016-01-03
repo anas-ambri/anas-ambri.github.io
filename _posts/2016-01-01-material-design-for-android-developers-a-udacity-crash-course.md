@@ -29,12 +29,14 @@ A device has a screen resolution, unit is dpi (dots-per-inch)
 
 >  # pixels / # dp = device_dpi/160 dpi
 
+```
 ldpi    <--> 120dpi <--> .75x
 mdpi    <--> 160dpi <--> 1x
 hdpi    <--> 240dpi <--> 1.5x
 xhdpi   <--> 320dpi <--> 2x
 xxhdpi  <--> 480dpi <--> 3x
 xxxhdpi <--> 640dpi <--> 4x
+```
 
 ### Assets
 
@@ -83,7 +85,7 @@ Use the design support lib
 When using appcompat for design, switch `android:Theme.Material.x` to `Theme.AppCompat.x`
 
 ####Example implementation
-https://github.com/udacity/ud862-samples/tree/master/FabDemo
+[FabDemo](https://github.com/udacity/ud862-samples/tree/master/FabDemo)
 
 ###Ripples
 
@@ -97,7 +99,7 @@ A list item in a list view can transform and expand to create the details view, 
 ###Seam-to-step
 
 This effect happens when a view is elevated above a sibling with which it was sharing the same elevation.
-Scrolling toolbar: https://github.com/udacity/ud862-samples/tree/master/ScrollEventsDemo
+[Scrolling toolbar demo](https://github.com/udacity/ud862-samples/tree/master/ScrollEventsDemo) 
 
 When using AppBarLayout, remember that it expects a sibling with `nestedScrollingEnabled=true`
 
@@ -114,7 +116,7 @@ When using AppBarLayout, remember that it expects a sibling with `nestedScrollin
 - All spacing values are multiple of 8dp
 - All line heights are multiple of 4 dp
 
-Sketch template with Material Design: https://www.google.com/design/spec/resources/sticker-sheets-icons.html#sticker-sheets-icons-product-icons
+[Sketch template with Material Design](https://www.google.com/design/spec/resources/sticker-sheets-icons.html#sticker-sheets-icons-product-icons)
 
 ###Colors
 
@@ -127,7 +129,7 @@ You can override the Theme (AppCompat or Material) default colors using the valu
 - navigationBarColor: for software buttons bar background color
 - colorAccent: for stuff that sticks out
 
-Choose a palette of colors: https://www.google.com/design/spec/style/color.html
+[Choose a palette of colors](https://www.google.com/design/spec/style/color.html)
 
 ###Typography
 
@@ -135,7 +137,7 @@ Use Roboto. Enough said
 
 ###Icons
 
-https://materialdesignicons.com/
+[Material Design Icons](https://materialdesignicons.com/)
 
 ##Lesson 4: Meaningful motion
 
@@ -148,7 +150,7 @@ New TransitionManager class that transitions between scenes. TransitionInflater 
 - Content transition for transition in master/detail views
 - Shared element transition
 
-Example: https://github.com/udacity/ud862-samples/tree/master/Unsplash
+[Demo](https://github.com/udacity/ud862-samples/tree/master/Unsplash)
 
 To customize animation for shared element transition, change the `windowSharedElementEnterTransition` theme property
 
@@ -163,12 +165,11 @@ To customize animation for shared element transition, change the `windowSharedEl
 - When doing a shared element transition, use a curved motion
 - When doing an increase in size, change width then height
 
-Examples: https://github.com/udacity/ud862-samples/tree/master/CoordinatedMotion
-
+[Demo](https://github.com/udacity/ud862-samples/tree/master/CoordinatedMotion)
 
 ###AnimatedVectorDrawable
 
-https://github.com/udacity/ud862-samples/tree/master/TickCross
+[TickCross Demo](https://github.com/udacity/ud862-samples/tree/master/TickCross)
 
 
 ##Lesson 5: Adaptive design
