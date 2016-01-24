@@ -1,0 +1,33 @@
+[
+    {
+	"id": 1,
+	"name": "The Girl on the Train",
+	"author": "Paula Hawkins",
+	"imgUrl": "http://ecx.images-amazon.com/images/I/51-VcOHdoFL._SL160_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU15_SL150_.jpg",
+        "type": "New Arrival"
+    },{
+	"id": 2,
+	"name": "All the Light We Cannot See: A Novel",
+	"author": "Anthony Doerr",
+	"imgUrl": "http://ecx.images-amazon.com/images/I/519xiqcy3RL._SL160_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU15_SL150_.jpg",
+        "type": "Novels"
+    },{
+	"id": 3,
+	"name": "Finders Keepers: A Novel",
+	"author": "Stephen King",
+	"imgUrl": "http://ecx.images-amazon.com/images/I/515EOHP5KfL._SL160_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU15_SL150_.jpg",
+        "type": "Non-fiction"
+    },{
+	"id": 4,
+	"name": "Oh, The Places You'll Go!",
+	"author": "Dr. Seuss",
+	"imgUrl": "http://ecx.images-amazon.com/images/I/51Fnoqj1veL._SL160_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU15_SL150_.jpg",
+        "type": "Classics"
+    },{
+	"id": 5,
+	"name": "The Martian: A Novel",
+	"author": "Andy Weir",
+	"imgUrl": "http://ecx.images-amazon.com/images/I/41-YkFaghDL._SL160_PIsitb-sticker-arrow-dp,TopRight,12,-18_SH30_OU15_SL150_.jpg",
+        "type": "Science-fiction"
+    }
+]
