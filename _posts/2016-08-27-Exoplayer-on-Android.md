@@ -33,3 +33,8 @@ tags: Android Media
 <img src="/images/adaptive_streaming_models.PNG" />
 
 `AdaptiveEvaluator` determines the quality to start with (based on network). If don't like the custom low-quality-first, override it.
+
+##Provided templates
+
+- `ExtractorRendererBuilder` (for non-adaptive playback)
+- `xxxxRendererBuilder` (xxxx being Dash, HLS, or SmoothStreaming) for the order types
