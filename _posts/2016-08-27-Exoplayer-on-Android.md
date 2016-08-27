@@ -11,4 +11,4 @@ tags: Android Media
 
 ##Supported formats
 
-<img src="/images/supported_media.png" />
+<img src="/images/supported_media.PNG" />
