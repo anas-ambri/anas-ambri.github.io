@@ -12,3 +12,7 @@ tags: Android Media
 ##Supported formats
 
 <img src="/images/supported_media.PNG" />
+
+##Play music
+
+<img src="/images/exoplayer_play_music.PNG" />
