@@ -7,3 +7,8 @@ published: false
 disqus: y
 tags: Android Media
 ---
+
+
+##Supported formats
+
+<img src="/images/supported_media.png" />
