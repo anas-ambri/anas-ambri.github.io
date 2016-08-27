@@ -16,3 +16,7 @@ tags: Android Media
 ##Play music
 
 <img src="/images/exoplayer_play_music.PNG" />
+
+##Play music
+
+<img src="/images/exoplayer_ui.PNG" />
