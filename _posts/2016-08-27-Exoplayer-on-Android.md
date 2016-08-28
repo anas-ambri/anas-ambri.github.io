@@ -38,3 +38,7 @@ tags: Android Media
 
 - `ExtractorRendererBuilder` (for non-adaptive playback)
 - `xxxxRendererBuilder` (xxxx being Dash, HLS, or SmoothStreaming) for the order types
+
+##Relationship with lifecycle
+
+<img src="/images/media_lifecycle.png" />
