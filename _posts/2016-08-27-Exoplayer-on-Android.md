@@ -40,5 +40,18 @@ tags: Android Media
 - `xxxxRendererBuilder` (xxxx being Dash, HLS, or SmoothStreaming) for the order types
 
 ##Relationship with lifecycle
-
+In N+, guarantee of stop being called right away (not guaranteed before, possibly 5 sec delay)
 <img src="/images/media_lifecycle.png" />
+
+##Audio Focus
+Last request gets it. Hold on to it until `stop`
+The request takes a listener, that needs to handle callbacks when audio focus is/might be lost
+
+- AUDIOFOCUS_LOSS: stop playback
+- AUDIOFOCUS_LOSS_TRANSIENT: pause, will get GAIN later
+- AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK: Lower volume, keep playing, or pause. Depends on use case (Test using 'Ok Google')
+
+##ACTION_AUDIO_BECOMING_NOISY
+Happens when the user switches from headphones to speaker. Best thing to do is to pause. Can't add receiver in manifest
+
+<img src="/images/action_audio_becoming_noisy.png" />
