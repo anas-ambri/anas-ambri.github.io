@@ -69,3 +69,6 @@ Happens when the user switches from headphones to speaker. Best thing to do is t
 Separating media playback service into its own process, so that memory footprint is small
 
 <img src="/images/media_lifecycle_with_service.png" />
+
+##Example
+https://github.com/googlesamples/android-UniversalMusicPlayer
