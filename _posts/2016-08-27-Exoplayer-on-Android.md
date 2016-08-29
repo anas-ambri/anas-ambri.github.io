@@ -55,3 +55,12 @@ The request takes a listener, that needs to handle callbacks when audio focus is
 Happens when the user switches from headphones to speaker. Best thing to do is to pause. Can't add receiver in manifest
 
 <img src="/images/action_audio_becoming_noisy.png" />
+
+##Media notification
+
+- setColor is needed. The color used must not be too strong because it will cover the whole notification
+- The actions' order depends on the order in which they are added (pause should be highest, thus first)
+- Important to set MediaSession
+
+<img src="/images/media_notification.png" />
+<img src="/images/media_notification.png" />
