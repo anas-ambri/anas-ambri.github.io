@@ -4,6 +4,7 @@ title: "Android Montreal talk - Groovy on Android"
 categories: presentations
 tags: Android, talk
 disqus: y
+redirect_from: "presentations/2014/09/26/android-montreal-talk"
 ---
 
 This past Thursday, I gave my first developer talk at the [Android Montreal User Group](http://android-montreal.com/). It revolved around using Groovy on Android, and the experience was extremely fun. I am leaving here a link to the slides I used for future reference.

@@ -6,7 +6,7 @@ categories: android
 published: true
 disqus: y
 tags:
- -
+redirect_from: "android/2015/12/19/special-place-for-samsung-in-android-hell"
 ---
 
 **Disclaimer**: if you are here just because you heard someone is bashing Samsung, scroll to the bottom. Also, you came to the right place.

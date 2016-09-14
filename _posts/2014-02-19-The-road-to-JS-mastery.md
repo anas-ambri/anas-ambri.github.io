@@ -5,6 +5,7 @@ date:   2014-02-19 13:24:43
 categories: blog
 disqus: y
 tags: functional-programming nodejs JS
+redirect_from: "blog/2014/02/19/the-road-to-JS-mastery"
 ---
 
 I like to think that Javascript is a very unique programming language. While it is super easy to get started in it (thanks to the [power of its View Source](http://www.codinghorror.com/blog/2006/08/the-power-of-view-source.html)), it takes years of practise to master the language. Indeed, the [wat effect](https://www.destroyallsoftware.com/talks/wat) of JS does make it difficult to develop any expertise in the language. 
