@@ -27,5 +27,3 @@ I agree that this is the kind of question that an Android developer need not to 
 
 ##Resources
 
-[1]: https://source.android.com/devices/input/touch-devices.html
-[2]: http://processors.wiki.ti.com/index.php/Capacitive_touch_integration_with_android
