@@ -54,7 +54,8 @@ android.support.** {*;}
 **Note that this should all be in one line**. Note also that the comment is not necessary for this change to work, but very encouraged for your own sanity.
 
 
-##Where to go from here
+Where to go from here
+---------------------
 
 Now that we got that out of the way, I would like you to grab a cup of coffee, and come back to this, because we got some ranting to do.
 

@@ -9,7 +9,8 @@ redirect_from: "ios/2014/09/26/abstracting-ios-8-new-location-manager"
 
 In the new iOS release, [CLLocationManager](https://developer.apple.com/library/prerelease/iOS/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html), the class responsible for retrieving location, gets a major overhaul, by introducing specific permission methods. While you can get some details on these changes by looking at the [documentation](https://developer.apple.com/library/prerelease/iOS/documentation/CoreLocation/Reference/CLLocationManager_Class/index.html), I wanted to introduce a wrapper class we are using at Guestful for wrapping all the Location-retrieval logic, especially the backward-compatibility code. This solution is based off Michael Babiy's [code](http://www.michaelbabiy.com/cllocationmanager-singleton/), which exposes a method for enabling a Singleton CLLocationManager class. The method exposed here takes this even further, by allowing any number of "observers" on this class.
 
-##The Code
+The Code
+-------
 We start off by exposing a protocol for our observers to implement, in our `GFLocationManager.h` file:
 
 ```objc
@@ -122,10 +123,13 @@ static int errorCount = 0;
 ```
 
 Note a few things:
+
 - The location manager will stop trying to update location if it fails three consecutive times. This is just a heuristic value; I would be interested to know if there are cases where this won't be enough.
 - We kick off a retrieval of location every time an observer requests it. This works because `CLLocationManager` takes care of caching the value 
 
-##How will you use this?
+How will you use this?
+----------------------
+
 - In your viewController, start by implementing the `GFLocationManagerDelegate` protocol:
 
 ```objc
@@ -150,4 +154,5 @@ Now, everytime the location is retrieved, the `locationManagerDidUpdateLocation`
 
 
 ###Improvements
+
 Introduce time-based refreshing of the location: if `addLocationManagerDelegate` has not been called in 5 min, schedule it again.
