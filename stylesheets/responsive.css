@@ -16,3 +16,11 @@
           padding: 0 15px; }
         body #container .links section.post > ul, body #container .links section.post > ol, body #container .content section.post > ul, body #container .content section.post > ol {
           padding: 0 30px; } }
+@media (max-width: 768px) {
+    img.third {
+	width: 100%;
+    }
+    img.half {
+	width: 100%;
+    }
+}

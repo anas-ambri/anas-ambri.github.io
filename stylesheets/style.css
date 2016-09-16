@@ -339,13 +339,6 @@ code {
 img {
     max-width: 100%;
 }
-img.half {
-    width: 50%;
-}
-img.side-by-side {
-    display: inline-block;
-    width: 45%;
-}
 
 .signoff {
   margin-top: 30px; }

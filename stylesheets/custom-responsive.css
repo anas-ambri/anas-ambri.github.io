@@ -1,0 +1,11 @@
+@media (max-width: 768px) {
+    img.third {
+	width: 60%;
+    }
+    img.half {
+	width: 100%;
+    }
+    img.three-quarters {
+	width: 100%;
+    }
+}
