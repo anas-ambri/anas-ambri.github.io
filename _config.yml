@@ -7,6 +7,9 @@ facebook_appid:   # appid for like button, remove from /_includes/share.html if 
 google_analytics: UA-71024069-1
 
 links:
+  - name:         Resume
+    url:          /downloads/resume/Anas_Ambri_CV.pdf
+    top:	  true	  
   - name:         Blog
     url:          /blog
     top:	  true	  
