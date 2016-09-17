@@ -10,9 +10,6 @@ links:
   - name:         Resume
     url:          /downloads/resume/Anas_Ambri_CV.pdf
     top:	  true	  
-  - name:         Blog
-    url:          /blog
-    top:	  true	  
   - name:         Presentations
     url:          /presentations
     top:	  true	  
