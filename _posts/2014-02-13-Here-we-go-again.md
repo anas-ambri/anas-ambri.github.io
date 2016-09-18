@@ -3,8 +3,10 @@ layout: post
 title:  "Here we go again!"
 date:   2014-02-13 16:13:36
 categories: blog
-tags: non-tech
-redirect_from: "/2014/02/13/Here-we-go-again"
+tags: Productivity
+redirect_from:
+ - "/2014/02/13/Here-we-go-again"
+ - "/2014/02/13/Here-we-go-again/"
 ---
 
 I always found blogging to be an intriguing activity. I am sure it had something to do with my tendency to inflict my opinion on people, though, being the eldest child, drawing attention to myself is certainly one of my favorite pastimes. Since it created the perfect mix of both, it shouldn't come as a surprise that I always wanted to write blog posts.

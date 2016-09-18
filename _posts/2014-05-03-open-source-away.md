@@ -3,8 +3,11 @@ layout: post
 title: Open-source away
 categories: blog
 disqus: y
-tags: tech, non-tech, work
-redirect_from: "blog/2014/05/03/farewell-gift"
+tags: 
+ - Work
+redirect_from:
+ - "blog/2014/05/03/farewell-gift"
+ - "blog/2014/05/03/farewell-gift/"
 ---
 
 Last Friday was my last day at [Radialpoint](http://radialpoint.com). I spent the last 16 months working as a software developer at one of [Montreal's finest places to work](http://www.glassdoor.com/Reviews/Radialpoint-Reviews-E11266.htm), and the ride has been thrilling. While I will dedicate a full blog post to reflect on the time I spent there, I wanted to focus here on a very cool thing I got to do before wrapping up: open-sourcing some of my code.

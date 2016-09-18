@@ -2,9 +2,12 @@
 layout: post
 title: Constraint programming
 categories: blog
-tags: on-the-road, discipline
+tags: 
+ - Productivity
 disqus: y
-redirect_from: "blog/2014/05/13/constraint-programming"
+redirect_from:
+ - "blog/2014/05/13/constraint-programming"
+ - "blog/2014/05/13/constraint-programming/"
 ---
 
 While going on my road trip, I decided to take a small laptop with me to do some programming/news browing. While the jury is still out there on whether that was a good idea or not, I thought I should write about the experience of using my notebook for software development during the trip so far. The machine in question is a 10"-screen 5-year old Internet-less [Dell notebook](http://www.dell.com/ca/p/inspiron-mini1012/pd), with a complete fresh Ubuntu 13.04 install. The title of this post is inspired by the fact that, like in [constraint programming](http://en.wikipedia.org/wiki/Constraint_programming), coding while on the road is defined mostly by what you can't do. (Hint: lack of Internet changes *everything*)
