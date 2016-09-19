@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Replacing android-async-http with OkHttp"
+title: "What your Android networking library says about you"
 comments: true
 categories: android
 published: false
