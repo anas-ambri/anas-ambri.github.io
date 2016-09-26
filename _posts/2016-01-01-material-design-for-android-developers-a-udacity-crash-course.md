@@ -6,7 +6,12 @@ categories: android
 published: true
 disqus: y
 tags:
-redirect_from: "android/2016/01/01/material-design-for-android-developers-a-udacity-crash-course"
+ - Material Design
+ - Android
+ - Udacity
+redirect_from: 
+ - "android/2016/01/01/material-design-for-android-developers-a-udacity-crash-course/"
+ - "android/2016/01/01/material-design-for-android-developers-a-udacity-crash-course"
 ---
 
 I never really had a chance to board the Material Design bandwagon when it started out. Working mostly with clients that go iOS first, I always just had to integrate iOS-minded designs and make them work on Android. To be honest, I never thought Material Design would catch on. I kinda felt it was a botched up attempt by Google to catch up on the look-ma-I-too-can-make-pretty-things wave (I am not saying design is not important; to the contrary, it's just that, maybe, there are more pressing matters for the Android platform). Anyway, I am glad I was proven wrong.
