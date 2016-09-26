@@ -14,11 +14,11 @@ redirect_from:
  - "android/2016/01/01/material-design-for-android-developers-a-udacity-crash-course"
 ---
 
-I never really had a chance to board the Material Design bandwagon when it started out. Working mostly with clients that go iOS first, I always just had to integrate iOS-minded designs and make them work on Android. To be honest, I never thought Material Design would catch on. I kinda felt it was a botched up attempt by Google to catch up on the look-ma-I-too-can-make-pretty-things wave (I am not saying design is not important; to the contrary, it's just that, maybe, there are more pressing matters for the Android platform). Anyway, I am glad I was proven wrong.
+I never really had a chance to board the Material Design bandwagon when it started out. Working mostly with clients that go iOS first, I always just had to integrate iOS-minded designs and make them work on Android. To be honest, I never thought Material Design would catch on. I kinda felt it was a botched up attempt by Google to catch up on the look-ma-I-can-make-pretty-things-too wave (I am not saying design is not important; to the contrary, it's just that, maybe, there are more pressing matters for the Android platform). Anyway, I am glad I was proven wrong.
 
-Material Design just grows on you: it's one of those things you just get used to. Seeing as more and more apps are transitioning into Material, I decided it was my duty to pick it up. It just happened that a link to the Udacity course about Material Design for Android Developers appeared on my reddit frontpage. This article is a collection of notes taken while completing the course.
+Material Design just grows on you: it's one of those things you just get used to. Seeing as more and more apps are transitioning into Material, I decided it was time to pick it up. It just happened that a link to the Udacity course about Material Design for Android Developers appeared on my reddit frontpage. This article is a collection of notes taken while completing the course.
 
-Overall, the class was actually pretty good; very pragmatic, and very useful for someone like me who has no design skills whatsoever. It even made me wanna purchase a license of Sketch!
+Overall, the class was actually pretty good; very pragmatic, and very useful for someone with very little design skills (like yours truly). It even made me wanna purchase a license of Sketch!
 
 ---
 
@@ -48,7 +48,7 @@ xxxhdpi <--> 640dpi <--> 4x
 - If including only one, use the highest dpi
 - Don't use raster graphics, use vector graphics apps like Sketch, where you can export in svg
 
-###Layouts
+### Layouts
  
 - FrameLayout should be used when children are overlapping. Last added child overlaps the ones before it
 - Avoid putting RelativeLayout as root
@@ -56,14 +56,14 @@ xxxhdpi <--> 640dpi <--> 4x
 - If layout_weight_child == weightSum_parent ==> child_height = parent_height - total_other_children_fixed_height (useful for making fitting view)
 - A ScrollView's child layout_height should be wrap_content
 
-###Common patterns
+### Common patterns
 
 - Height of toolbar can be queried at `?actionBarSize`
 - "Scrolling a list and horizontal paging of content are incompatible", Nick Butcher. You hear that, Gmail?
 
-##Lesson 2: Surfaces
+## Lesson 2: Surfaces
 
-###Overview
+### Overview
 
 A surface is a container for content, it provides grouping and separation from other elements.
 
@@ -75,7 +75,7 @@ Elevated objects cover other surfaces with shadow. The closer the object, the mo
 
 > android:elevation="4dp"
 
-###FAB
+### FAB
 
 The FAB can be either 40 or 56 dp diameters, with 6dp elevation at rest, with 12dp elevation when pressed
 Use the design support lib
@@ -89,41 +89,41 @@ Use the design support lib
 
 When using appcompat for design, switch `android:Theme.Material.x` to `Theme.AppCompat.x`
 
-####Example implementation
+#### Example implementation
 [FabDemo](https://github.com/udacity/ud862-samples/tree/master/FabDemo)
 
-###Ripples
+### Ripples
 
 If a surface has bounds, ripple affects the whole area
 If a surface is boundless, ripple creates a circle
 
-###Paper metaphor
+### Paper metaphor
 
 A list item in a list view can transform and expand to create the details view, and overlay a new surface
 
-###Seam-to-step
+### Seam-to-step
 
 This effect happens when a view is elevated above a sibling with which it was sharing the same elevation.
 [Scrolling toolbar demo](https://github.com/udacity/ud862-samples/tree/master/ScrollEventsDemo) 
 
 When using AppBarLayout, remember that it expects a sibling with `nestedScrollingEnabled=true`
 
-##Lesson 3: Bold graphic design
+## Lesson 3: Bold graphic design
 
-###Getstalt principles
+### Getstalt principles
 
 - Law of past familiar experience: use familiar objects
 - Law of proximity: close stuff are related
 - Law of similarity: similar objects are related
 
-###Grids
+### Grids
 
 - All spacing values are multiple of 8dp
 - All line heights are multiple of 4 dp
 
 [Sketch template with Material Design](https://www.google.com/design/spec/resources/sticker-sheets-icons.html#sticker-sheets-icons-product-icons)
 
-###Colors
+### Colors
 
 You can override the Theme (AppCompat or Material) default colors using the values:
 
@@ -136,21 +136,21 @@ You can override the Theme (AppCompat or Material) default colors using the valu
 
 [Choose a palette of colors](https://www.google.com/design/spec/style/color.html)
 
-###Typography
+### Typography
 
 Use Roboto. Enough said
 
-###Icons
+### Icons
 
 [Material Design Icons](https://materialdesignicons.com/)
 
-##Lesson 4: Meaningful motion
+## Lesson 4: Meaningful motion
 
-###Animations in Android 4.4
+### Animations in Android 4.4
 
 New TransitionManager class that transitions between scenes. TransitionInflater for custom xml <transitionSet>
 
-###Animations in Android 5.0
+### Animations in Android 5.0
 
 - Content transition for transition in master/detail views
 - Shared element transition
@@ -160,7 +160,7 @@ New TransitionManager class that transitions between scenes. TransitionInflater 
 To customize animation for shared element transition, change the `windowSharedElementEnterTransition` theme property
 
 
-###Instructive motion
+### Instructive motion
 
 - Animation length ~300ms
 - Use fast-out slow-in for movement within the screen
@@ -172,12 +172,12 @@ To customize animation for shared element transition, change the `windowSharedEl
 
 [Demo](https://github.com/udacity/ud862-samples/tree/master/CoordinatedMotion)
 
-###AnimatedVectorDrawable
+### AnimatedVectorDrawable
 
 [TickCross Demo](https://github.com/udacity/ud862-samples/tree/master/TickCross)
 
 
-##Lesson 5: Adaptive design
+## Lesson 5: Adaptive design
 
 Always inherit your theme twice, so you can override the base theme in your sw600-dp style
 
