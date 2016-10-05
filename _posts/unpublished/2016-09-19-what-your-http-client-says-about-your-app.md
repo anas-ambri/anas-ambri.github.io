@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "What your Android networking library says about your app"
+title: "What your HTTP client says about your (multi-threaded) app"
 comments: true
 categories: android
 published: false
@@ -27,7 +27,9 @@ A few things to note here:
 
 ## Why is this important?
 
-Starting from Honeycomb, it was no longer possible to make network calls from the main thread (or else, the app would crash with a [NetworkOnMainThreadException](https://developer.android.com/reference/android/os/NetworkOnMainThreadException.html). The goal of this change was to force developers to put long-running operations off the main thread (other such operations are disk read & writes, or even [custom slow calls](https://developer.android.com/reference/android/os/StrictMode.ThreadPolicy.Builder.html)). Ultimately, it was this restriction (along with multi-core processors) that forced Android developers to start looking into ways for solving multi-threading on Android. This is the reason we ended up moving from single-threaded apps, to AsyncTask & Intent Services, and finally to RxJava. (Who said [Honeycomb was useless?](https://www.reddit.com/r/AndroidMasterRace/comments/41g74s/what_would_you_say_are_the_best_and_worst/))
+Starting from Honeycomb, it was no longer possible to make network calls on the main thread (or else, the app would crash with a [NetworkOnMainThreadException](https://developer.android.com/reference/android/os/NetworkOnMainThreadException.html)). The goal of this change was to encourage developers to put long-running operations [off the main thread](http://android-developers.blogspot.ca/2010/12/new-gingerbread-api-strictmode.html). Ultimately, it was this restriction (along with multi-core processors) that forced Android developers to start looking into ways to do multi-threading better on Android. This is also the reason we ended up moving from single-threaded apps, to AsyncTask & Intent Services, and finally to RxJava.
+
+Going back to our example, here is a diagram that illustrates how 
 
 If you are a visual kind of person, here is a diagram for you:
 
