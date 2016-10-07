@@ -12,9 +12,15 @@ tags:
 
 **android-async-http** is an Android HTTP client library that ensures that any callback is called on the same thread as the one originating the HTTP request. While this can have some adverse effects on the [testability of your Android app](http://verybadalloc.com/android/what-your-http-client-says-about-your-app.html), it can sometimes be the perfect solution for a quick demo project, where we only care about quickly getting bytes straight off the network to the UI thread.
 
+Internally, the library relies on Android's Handler message passing mechanism. What's that, you may ask? It's an Android-specific mechanism for scheduling tasks (also known as [Runnables](https://developer.android.com/reference/java/lang/Runnable.html)), or for sending tasks to be performed across threads. While **Runnables** are part of the Java language, [Handlers](https://developer.android.com/reference/android/os/Handler.html), [Messages](https://developer.android.com/reference/android/os/Message.html) (and [Loopers](https://developer.android.com/reference/android/os/Looper.html)) are part of the **android.os** package, so it must be understood that they are not part of the JVM.
+
+## Intro to the Android threading model
+
+When an application is started, 
+
 ## Implementation details
 
-Internally, the library relies on Android's Handler message passing mechanism.
+
 
 ## A handler to rule them all
 
