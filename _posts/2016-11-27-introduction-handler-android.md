@@ -153,8 +153,8 @@ All these handlers will reference the same Looper, so you are writing into the m
 
 ## References
 
-[A good rundown of the Handler mechanism on Android](http://codetheory.in/android-handlers-runnables-loopers-messagequeue-handlerthread/)
-[Source code of ActivityThread](http://androidxref.com/7.0.0_r1/xref/frameworks/base/core/java/android/app/ActivityThread.java)
+- [A good rundown of the Handler mechanism on Android](http://codetheory.in/android-handlers-runnables-loopers-messagequeue-handlerthread/)
+- [Source code of ActivityThread](http://androidxref.com/7.0.0_r1/xref/frameworks/base/core/java/android/app/ActivityThread.java)
 
 ## Footnotes
 <sup>1</sup>: Though they are [phasing out its use](https://github.com/ReactiveX/RxAndroid/commit/0bb9b4e63f5560ca238233f1c4d692d9bc8b5ba0)
