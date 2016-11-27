@@ -1,28 +1,19 @@
 ---
 layout: post
-title: "How android-async-http callback-on-main-thread works"
+title: "A good implementation example of Android's Handler mechanism"
 comments: true
-categories: android
+categories: blog
 published: false
 disqus: y
 tags:
- android-async-http
- Internals
+ -
 ---
 
+Finally, this whole post was the consequence of my interest in **android-async-http**, a thread-aware Android HTTP client library. I will include that original research here as well, if you feel you didn't hear me repeat the word Handler enough. It's a good implementation for how Handlers can be used for stuff that needs to happen across threads.
+
+## Epilogue - Practical example: android-async-http
+
 **android-async-http** is an Android HTTP client library that ensures that any callback is called on the same thread as the one originating the HTTP request. While this can have some adverse effects on the [testability of your Android app](http://verybadalloc.com/android/what-your-http-client-says-about-your-app.html), it can sometimes be the perfect solution for a quick demo project, where we only care about quickly getting bytes straight off the network to the UI thread.
-
-Internally, the library relies on Android's Handler message passing mechanism. What's that, you may ask? It's an Android-specific mechanism for scheduling tasks (also known as [Runnables](https://developer.android.com/reference/java/lang/Runnable.html)), or for sending tasks to be performed across threads. While **Runnables** are part of the Java language, [Handlers](https://developer.android.com/reference/android/os/Handler.html), [Messages](https://developer.android.com/reference/android/os/Message.html) (and [Loopers](https://developer.android.com/reference/android/os/Looper.html)) are part of the **android.os** package, so it must be understood that they are not part of the JVM.
-
-## Intro to the Android threading model
-
-When an application is started, 
-
-## Implementation details
-
-
-
-## A handler to rule them all
 
 Looking into the library's source code, we can see that requests are simply Runnables that get submitted to a [ExecutorService](https://developer.android.com/reference/java/util/concurrent/ExecutorService.html), which acts as a thread pool for all requests.
 
@@ -59,7 +50,7 @@ public class AsyncHttpRequest implements Runnable {
 }
 ```
 
-These Runnables will defer their work to [Handlers](https://developer.android.com/reference/android/os/Handler.html), which are smart enough to know which thread to callback to: they use [Looper.myLooper()](https://developer.android.com/reference/android/os/Looper.html#myLooper()) to figure out the current thread.
+These Runnables will defer their work to [Handlers](https://developer.android.com/reference/android/os/Handler.html), which are smart enough to know which thread to callback to: they use [Looper.myLooper()](https://developer.android.com/reference/android/os/Looper.html#myLooper()) to figure out their original thread.
 
 ```java
 
@@ -68,7 +59,7 @@ public abstract class AsyncHttpResponseHandler implements ResponseHandlerInterfa
     private Handler handler;
 
     public AsyncHttpResponseHandler(Looper looper) {
-        this.looper = looper == null ? Looper.myLooper() : looper;
+        this.looper = looper == null ? Looper.myLooper() : looper;  <=== Right here
         //...
         handler = new ResponderHandler(this, looper);
     }

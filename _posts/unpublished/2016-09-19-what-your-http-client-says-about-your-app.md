@@ -9,6 +9,8 @@ tags:
  - android
 ---
 
+I am experimenting with these objc.io style articles (e.g., longer than the average medium article, shorter than a book chapter). Let me know how you guys feel about them.
+
 ## Android HTTP client 101
 
 [android-async-http](https://github.com/loopj/android-async-http) is a callback-based HTTP client library for Android. It has been my go-to http client library since I started Android, up until two years ago. It is perfect for beginners, because:
