@@ -73,7 +73,7 @@ The point is: when an application is launched, a main thread is created, and the
 
 Each main thread comes with three objects:
 
-- A MessageQueue, which, as its name suggests, is a queue of Messages. Any action performed by your app is, at its core, a simple Message that was enqueued to the MessageQueue. Don't believe me? Here is the [method that pauses an Activity](http://androidxref.com/7.0.0_r1/xref/frameworks/base/core/java/android/app/ActivityThread.java#657).
+- A MessageQueue, which, as its name suggests, is a queue of Messages. Any action performed by your app is, at its core, a simple Message that was enqueued to the MessageQueue. Here is, for example, the [method that pauses an Activity](http://androidxref.com/7.0.0_r1/xref/frameworks/base/core/java/android/app/ActivityThread.java#657).
 - A Handler: Messages are not directly added to the MessageQueue. Instead, a Handler is created to take care of two things: deliver messages to the MessageQueue, and execute them as they come out of the queue.
 - A Looper: the main job of the Looper is... to loop, [infinitely](http://androidxref.com/7.0.0_r1/xref/frameworks/base/core/java/android/os/Looper.java#123):
 
