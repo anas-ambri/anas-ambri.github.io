@@ -9,7 +9,9 @@ tags:
  - Mockito
 ---
 
-The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis), for free.
+The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis) for free. Other than calling `MockitoAnnotations.initMocks()` for you on each mock object, it also does some validation at the end of each test. Let's take a look at an example:
+
+`@RunWith(MockitoJUnitRunner
 
 The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/mockito/Mockito.html#validateMockitoUsage()) list a bunch of examples that would fail, thanks to this validation:
 
@@ -24,14 +26,14 @@ The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/moc
  verify(mock);
  ```
  
- The additional benefit of using `MockitoJUnitRunner`, then, is the fact that the runner `validateMockitoUsage()` for you, in the `@After` hook, making sure that these errors are reported in the same test as they occur.
+The additional benefit of using `MockitoJUnitRunner`, then, is the fact that the runner `validateMockitoUsage()` for you, in the `@After` hook, making sure that these errors are reported in the same test as they occur.
 
  
- ## New runners
+## New runners
  
- It turns out that, since 2.1, Mockito has been shipping with a bunch of extra runners.They are are all part of the [MockitoJUnitRunner](https://github.com/mockito/mockito/blob/v2.8.29/src/main/java/org/mockito/junit/MockitoJUnitRunner.java#L76) class:
+ Mockito 2.1 introduced two runners to be used with a bunch of extra runners.They are are all part of the [MockitoJUnitRunner](https://github.com/mockito/mockito/blob/v2.8.29/src/main/java/org/mockito/junit/MockitoJUnitRunner.java#L76) class:
  
- - 
+- 
 
  ## Epilogue
  
