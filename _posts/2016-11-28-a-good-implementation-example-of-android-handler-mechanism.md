@@ -2,7 +2,7 @@
 layout: post
 title: "A good implementation example of Android's Handler mechanism"
 comments: true
-categories: blog
+categories: android
 published: true
 disqus: y
 tags:

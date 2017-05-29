@@ -3,7 +3,7 @@ layout: post
 title: "What your HTTP client says about you"
 comments: true
 categories: android
-published: false
+published: true
 disqus: y
 tags:
  - android
@@ -12,7 +12,7 @@ tags:
 
 ### Foreword
 
-Yes, if you are to start an Android project today, you would just use OkHttp.
+Yes, if you are a new Android project today, you would just use OkHttp.
 
 
 ## Android HTTP client 101
@@ -37,9 +37,9 @@ A few things to note here:
 
 Starting from Honeycomb, it was no longer possible to make network calls on the main thread (or else, the app would crash with a [NetworkOnMainThreadException](https://developer.android.com/reference/android/os/NetworkOnMainThreadException.html)). The goal of this change was to encourage developers to put long-running operations [off the main thread](http://android-developers.blogspot.ca/2010/12/new-gingerbread-api-strictmode.html). Ultimately, it was this restriction (along with the rise of multi-core processors) that forced Android developers to start looking into ways to do multi-threading better on Android. This has started a long journey, moving from single-threaded apps, to AsyncTask & Intent Services, and finally to RxJava (Some even say [the journey hasn't ended yet](http://www.reactive-streams.org/)).
 
-## Act 2
+## There is always a 'but'
 
-Let's say that we used MVP throughout our app. Using **android-async-http**, this is how the request/callback flow will behave across our network stack:
+Let's say that we used MVP throughout our app. Using **android-async-http**, this is how the request/callback flow will behave across our classes:
 
 <div class="img-center"><img src="/images/NetworkingLibrary/diagram_async.png" class="three-quarters"/> </div>
 
@@ -47,7 +47,7 @@ Let's say that we used MVP throughout our app. Using **android-async-http**, thi
 
 Why is this a problem? For the same reason why the community has been pushing for MVP in Android, or why [Espresso test recorder](https://developer.android.com/studio/test/espresso-test-recorder.html) is the coolest thing since sliced bread: **Testing**.
 
-As it turns out, the only (sensible) way to test this HTTP client is to use [Robolectric](https://gist.github.com/Axxiss/7143760), which isn't [*really*](https://www.reddit.com/r/androiddev/comments/6d0or6/what_are_the_immediate_disadvantages_of_using/dhywu7q) ideal. The trick is to provide a custom **ExecutorService** that executes synchronously, and [inject it in your code](anasambri.com/android/adding-unit-tests-to-MVP-project.html) during the tests.
+As it turns out, the only (sensible) way to test this HTTP client is to use [Robolectric](https://gist.github.com/Axxiss/7143760), which isn't [*really*](https://www.reddit.com/r/androiddev/comments/6d0or6/what_are_the_immediate_disadvantages_of_using/dhywu7q) ideal. The trick is to provide a custom **ExecutorService** that executes synchronously, and use it instead of the [default thread pool inside the library](/android/a-good-implementation-example-of-android-handler-mechanism.html).
   
 ## Beyond a beginner HTTP client
 
@@ -68,7 +68,7 @@ Only the original thread that created a view hierarchy can touch its views.
 
 ## Coming back full-circle
 
-What is happening here? Because the callback is executed on the background thread, any code said callback calls is also executed on that thread, including our calls to update the UI. This is not good because Android doesn't like that: only the UI thread can touch its UI. Ultimately, this is what we want:
+What is happening here? Because the callback is executed on the background thread, any code executed inside the callback is also executed on that thread, including our calls to update the UI. This is not good because Android doesn't like that: only the UI thread can touch its UI. Ultimately, this is what we want:
 
 <div class="img-center"><img src="/images/NetworkingLibrary/diagram_okhttp_improved.png"/></div>
 
@@ -82,6 +82,6 @@ Using Handlers, one can pass a Runnable that will refresh the UI. It turns out, 
 
 A few added notes:
 
-- No, passing **Runnables** around is not a solution that scales well. Ultimately, if you are to build an app with the best Engineering Practices™ in mind, you have to resort to Rx. But, as they say in the *biz*, simple apps can get away with murder.
-- Another solution to the `CalledFromWrongThreadException`, in the context of MVP, is the [`@CallOnUiThread`](https://github.com/grandcentrix/ThirtyInch/blob/master/thirtyinch/src/main/java/net/grandcentrix/thirtyinch/callonmainthread/CallOnMainThreadInvocationHandler.java#L76) annotation from ThirtyInch.
+- No, passing **Runnables** around is not a solution that scales well. Ultimately, if you are to build an app with the best Engineering Practices™ in mind, you have to resort to Rx. But, as they say in the *biz*, demo apps can get away with a lot.
+- Another solution to the `CalledFromWrongThreadException`, in the context of MVP, is to use [`@CallOnUiThread`](https://github.com/grandcentrix/ThirtyInch/blob/master/thirtyinch/src/main/java/net/grandcentrix/thirtyinch/callonmainthread/CallOnMainThreadInvocationHandler.java#L76) annotation from ThirtyInch.
 
