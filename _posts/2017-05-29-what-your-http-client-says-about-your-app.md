@@ -12,8 +12,7 @@ tags:
 
 ### Foreword
 
-Yes, if you are a new Android project today, you would just use OkHttp.
-
+Yes, if you are starting a new Android project today, you would just use OkHttp. 
 
 ## Android HTTP client 101
 
@@ -84,4 +83,6 @@ A few added notes:
 
 - No, passing **Runnables** around is not a solution that scales well. Ultimately, if you are to build an app with the best Engineering Practices™ in mind, you have to resort to Rx. But, as they say in the *biz*, demo apps can get away with a lot.
 - Another solution to the `CalledFromWrongThreadException`, in the context of MVP, is to use [`@CallOnUiThread`](https://github.com/grandcentrix/ThirtyInch/blob/master/thirtyinch/src/main/java/net/grandcentrix/thirtyinch/callonmainthread/CallOnMainThreadInvocationHandler.java#L76) annotation from ThirtyInch.
+
+Finally, if you've been an Android developer for a little while now, none of what is mentioned in the article should be news to you. But, amidst all the exciting new stuff coming every week, it is sometimes easy to forget the basics. The goal here was to start with a simple problem (choosing a HTTP client library), and try to explore all its implications.
 
