@@ -2,7 +2,7 @@
 layout: post
 title: "The case against Parse's `@dynamic`/`@nsmanaged`"
 comments: true
-categories: blog
+categories: ios
 published: true
 disqus: y
 tags: ios
