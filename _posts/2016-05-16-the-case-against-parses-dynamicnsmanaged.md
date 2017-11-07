@@ -1,4 +1,4 @@
----
+--
 layout: post
 title: "The case against Parse's `@dynamic`/`@nsmanaged`"
 comments: true
@@ -22,24 +22,20 @@ In both cases, it is the parent class that takes care of implementing the getter
 
 Say, you have a flag on your user object, used to determine if the user can buy alcohol (minors can't). This would look like this:
 
-```
+```objectivec
 @interface User : PFUser <PFSubclassing>
-
 @property (retain) NSNumber *canBuyAlcohol;
-
 @end
 
 @implementation User
-
 @dynamic canBuyAlcohol;
-
 @end
 
 ```
 
 Ultimately, in your code, you will be using this to determine if you can allow a user to buy alcohol.
 
-```
+```objectivec
 User* user = [User currentUser];
 if([user.canBuyAlcohol boolValue]) {
     self.buyAlcoholButton.hidden = YES;
@@ -54,7 +50,7 @@ etc.
 
 Because we don't have the ability to override the getter/setter of the property, changing the logic *requires* applying the new logic everywhere the flag is used. Basically, copy-pasting code like the following everywhere:
 
-```
+```objectivec
 User* user = [User currentUser];
 if([user.canBuyAlcohol boolValue]
     ||
@@ -76,7 +72,7 @@ And, it turns out, that is possible!
 
 Custom getter
 
-```
+```objectivec
 - (NSObject*) getFoo {
     [self willAccessValueForKey:@"foo"];
     NSString *foo = [self primitiveValueForKey:@"foo"];
@@ -87,7 +83,7 @@ Custom getter
 
 Custom Setter
 
-```
+```objectivec
 - (void) setFoo:(NSObject *)inFoo {
   [self willChangeValueForKey:@"foo"];
   [self setPrimitiveValue:inFoo forKey:@"foo"];
@@ -98,30 +94,24 @@ Custom Setter
 
 ## Can you do the same thing with Parse?
 
-Technically, you can't. Parse doesn't have a *public* interface of what it does inside its accessors[1]. However, looking at their open-source libraries, we can probably guess. The problem is that they could always change it, and break whatever functionality was built on top (and yes, those bugs would be impossible to track).
+Technically, you can't. Parse doesn't have a *public* interface of what it does inside [its accessors](https://parse.com/questions/subclassing-pfobject-while-overriding-dynamically-added-accessors). However, looking at their open-source libraries, we can probably guess. The problem is that they could always change it, and break whatever functionality was built on top (and yes, those bugs would be impossible to track).
 
 
 ## So, what's the solution?
 
 Always define your own getters/setters for anything that can involve some kind of validation. For our `canBuyAlcohol` example, consider this:
 
-```
+```objectivec
 @interface User : PFUser <PFSubclassing>
-
 @property (retain) NSNumber *canBuyAlcohol;
-
 - (BOOL) canBuyAlcoholCheck;
-
 @end
 
 @implementation User
-
 @dynamic canBuyAlcohol;
-
 - (BOOL) canBuyAlcoholCheck {
   //Do check
 }
-
 @end
 
 ```
@@ -131,12 +121,8 @@ You need to make sure that the method doesn't have the same name as the property
 
 
 ### Further reading
-[1]: [Can't override Parse's getter & setters](https://parse.com/questions/subclassing-pfobject-while-overriding-dynamically-added-accessors)
 
-[2]: [What are the differences between synthesize and dynamic?](http://stackoverflow.com/questions/1160498/synthesize-vs-dynamic-what-are-the-differences)
-
-[3]: [Custom setter for CoreData property](http://stackoverflow.com/questions/2971806/custom-setter-methods-in-core-data)
-
-[4]: [Custom getter for CoreData property](http://stackoverflow.com/questions/15853696/with-coredata-if-i-have-an-dynamic-property-can-i-override-its-getter-just-li)
-
-[5]: [Why getters and setters are important](http://stackoverflow.com/a/1568230/2426818)
+- [What are the differences between synthesize and dynamic?](http://stackoverflow.com/questions/1160498/synthesize-vs-dynamic-what-are-the-differences)
+- [Custom setter for CoreData property](http://stackoverflow.com/questions/2971806/custom-setter-methods-in-core-data)
+- [Custom getter for CoreData property](http://stackoverflow.com/questions/15853696/with-coredata-if-i-have-an-dynamic-property-can-i-override-its-getter-just-li)
+- [Why getters and setters are important](http://stackoverflow.com/a/1568230/2426818)

@@ -11,14 +11,14 @@ tags:
  - Photos
 ---
 
-# Accessing camera
+## Accessing camera
 
-## Requesting access for media types
+### Requesting access for media types
 
 One can request access to the camera/microphone using `AVCaptureDevice::requestAccessForMediaType:completionHandler:`. Note however that `completionHandler` will be called in a background thread. If you want to do some UIKit operation, you need to [dispatch to the main queue](https://developer.apple.com/library/ios/documentation/AVFoundation/Reference/AVCaptureDevice_Class/#//apple_ref/occ/clm/AVCaptureDevice/requestAccessForMediaType:completionHandler:).
 One good approach is the following:
 
-```
+```objectivec
     void (^cb)(BOOL) = ^void(BOOL granted) {
         if (!granted) {
             dispatch_async(dispatch_get_main_queue(), ^{
@@ -36,12 +36,12 @@ One good approach is the following:
     }
 ```
 
-# Accessing photos
+## Accessing photos
 
-## Requesting access
+### Requesting access
 Same process as with AV, we must check the `Photos` framework.
 
-```
+```objectivec
 void (^cb)(PHAuthorizationStatus) = ^void(PHAuthorizationStatus status) {
         if (status == PHAuthorizationStatusDenied || status == PHAuthorizationStatusRestricted) {
    	   //handle denied access                     
