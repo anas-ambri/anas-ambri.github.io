@@ -13,7 +13,8 @@ tags:
 The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation, as opposed to manually calling `MockitoAnnnotations.initMocks()`, is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis) for free. This validation runs as an **@After** hook, making sure that the errors are reported in the same test as they occur. The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/mockito/Mockito.html#validateMockitoUsage()) list a bunch of examples that would fail, thanks to this validation:
 
 ```java
- //Oops, thenReturn() part is missing:
+
+//Oops, thenReturn() part is missing:
  when(mock.get());
 
  //Oops, verified method call is inside verify() where it should be on the outside:
@@ -21,7 +22,8 @@ The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation, a
 
  //Oops, missing method to verify:
  verify(mock);
- ```
+
+```
  
 ## New runner
  
@@ -33,6 +35,7 @@ Mockito 2.1 introduced a new runner, capable of one extra level of verification,
 Unused stubs happen when the mock is expecting a certain call to happen, but never receives it. Consider this example:
 
 ```java
+
 //Enables the strict runner
 @RunWith(MockitoJUnitRunner.Strict.class)
 public class ExampleUnitTest {
