@@ -3,7 +3,7 @@ layout: post
 title: "Chaining Mockito and Android instrumentation test rules"
 comments: true
 categories: android
-published: true
+published: false
 disqus: y
 tags:
  - testing

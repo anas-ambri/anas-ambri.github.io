@@ -2,11 +2,12 @@
 layout: post
 title: "The other MockitoJUnitRunners"
 comments: true
-categories: blog
-published: false
+categories: android
+published: true
 disqus: y
 tags:
  - Mockito
+ - testing
 ---
 
 The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation, as opposed to manually calling `MockitoAnnnotations.initMocks()`, is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis) for free. This validation runs as an `@After` hook, making sure that the errors are reported in the same test as they occur. The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/mockito/Mockito.html#validateMockitoUsage()) list a bunch of examples that would fail, thanks to this validation:
