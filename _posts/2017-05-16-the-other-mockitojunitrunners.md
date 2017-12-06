@@ -32,7 +32,8 @@ Mockito 2.1 introduced a new runner, capable of one extra level of verification,
 Unused stubs happen when the mock is expecting a certain call to happen, but never receives it. Consider this example:
 
 ```java
-@RunWith(MockitoJUnitRunner.class)
+//Enables the strict runner
+@RunWith(MockitoJUnitRunner.Strict.class)
 public class ExampleUnitTest {
 
     interface Dependency {
@@ -58,31 +59,43 @@ public class ExampleUnitTest {
 	@Before
 	public void setup() {
 	    example = new Example(mock);
-		doReturn(true).when(mock).isChecked();
+		doReturn(true).when(mock).isChecked(); //Unused stubbing
 	}
 	
 	@Test
 	public void testDoSomethingCalled() {
-	    
+	    example.doSomething();
+		verify(example).doSomething();
 	}
 }
 
 ```
 
- ## Epilogue
- 
- Did you know that these runners can be used as rules as well? This is useful in cases where a different runner is required (for example, [`RobotElectricTestRunner`](http://robolectric.org/getting-started/)). It looks like this:
- 
- ```java
- @Rule
- public MockitoRule rule = MockitoJUnit.rule();
- ```
- This also comes in silent and strict variants:
- 
- ```java
- @Rule
-public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.SILENT);
+While this test passes, you will get a `MockitoHint` stating that the stubbing is unused, going as far as marking exactly where the unused stubbing is created. 
+
+### Multiple flavours
+
+This runner can be used in different ways:
+- As a runner, as shown above.
+- As a rule. In the case where we can't use the MockitoRunner inside the `@RunWith` annotation (as when using `AndroidJUnitRunner`), one can just attach a `@Rule` to the test.
+
+```java
+
 @Rule
-public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS);
+public MockitoRule rule = MockitoJUnit.rule();
 ```
-Note that the `Scritness.SCRICT_STUBS` is available on 2.3+
+- As a configuration for the mocking session. This would almost never be used (first two ways are usually enough), so I won't show an example of it here.
+
+
+### StrictStubs
+
+Since Mockito 2.3, a new level of strictness has been added. This `StrictStubs` level will actually fail the tests if an unused stubbing is detected. This will force you to clean up your code, which is why the Mockito team is planning to make it default in Mockito 3. As before, this can be used as:
+
+- A runner, using `@RunWith(MockitoJUnitRunner.StrictStubs.class)`
+- A rule, using 
+
+```java
+
+@Rule
+public MockitoRule rule = MockitoJUnit.rule();
+```
