@@ -10,7 +10,7 @@ tags:
  - testing
 ---
 
-The main benefit of using the `@RunWith(MockitoJUnitRunner.class)` annotation, as opposed to manually calling `MockitoAnnnotations.initMocks()`, is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis) for free. This validation runs as an **@After** hook, making sure that the errors are reported in the same test as they occur. The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/mockito/Mockito.html#validateMockitoUsage()) list a bunch of examples that would fail, thanks to this validation:
+The main benefit of using the **@RunWith(MockitoJUnitRunner.class)** annotation, as opposed to manually calling **MockitoAnnnotations.initMocks()**, is the extra validation that the runner [does for you](http://stackoverflow.com/questions/10806345/runwithmockitojunitrunner-class-vs-mockitoannotations-initmocksthis) for free. This validation runs as an **@After** hook, making sure that the errors are reported in the same test as they occur. The [javadocs](https://static.javadoc.io/org.mockito/mockito-core/2.7.22/org/mockito/Mockito.html#validateMockitoUsage()) list a bunch of examples that would fail, thanks to this validation:
 
 ```java
 
@@ -81,7 +81,8 @@ While this test passes, you will get a **MockitoHint** stating that the stubbing
 
 This runner can be used in different ways:
 - As a runner, as shown above. (Actually, since this is the default behavior, putting **@RunWith(MockitoJUnitRunner.class)** suffices
-- As a rule. In the case where we can't use the MockitoRunner inside the **@RunWith** annotation (as when using `AndroidJUnitRunner`), one can just attach a **@Rule** to the test, like so: `@Rule public MockitoRule rule = MockitoJUnit.rule();`
+- As a rule. In the case where we can't use the MockitoRunner inside the **@RunWith** annotation (as when using **AndroidJUnitRunner**), one can just attach a **@Rule** to the test, like so: 
+`@Rule public MockitoRule rule = MockitoJUnit.rule();`
 - As a configuration for the mocking session. This would almost never be used (first two ways are usually enough), so I won't show an example of it here.
 
 ### StrictStubs
@@ -89,4 +90,5 @@ This runner can be used in different ways:
 Since Mockito 2.3, a new level of strictness has been added. This `StrictStubs` level will actually fail the tests if an unused stubbing is detected. This will force you to clean up your code, which is why the Mockito team is planning to make it default in Mockito 3. As before, this can be used as:
 
 - A runner, using **@RunWith(MockitoJUnitRunner.StrictStubs.class)**
-- A rule, using `@Rule public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS);`
+- A rule, using:
+`@Rule public MockitoRule rule = MockitoJUnit.rule().strictness(Strictness.STRICT_STUBS);`
