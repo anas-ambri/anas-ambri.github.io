@@ -1,0 +1,20 @@
+---
+layout: page
+title: ALL OPEN-SOURCE
+---
+
+<ul class="posts">
+  {% for category in site.categories %}
+  {% if category[0] == 'open-source' %}
+  {% for posts in category %}
+  {% for post in posts %}
+  {% if post.link %} {% comment %} // To remove a first empty post {% endcomment %}
+  <li>
+    <a href="{{ post.link }}">{{ post.title }}</a>
+  </li>
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</ul>
