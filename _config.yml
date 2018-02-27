@@ -1,6 +1,5 @@
 title:            Anas Ambri's website
-description:      Musings of a Mobile Developer
-url:              http://verybadalloc.com
+url:              http://anasambri.com
 signoff:          Anas Ambri
 disqus_shortname: verybadalloc
 facebook_appid:   # appid for like button, remove from /_includes/share.html if unwanted.
@@ -12,6 +11,9 @@ links:
     top:	  true	  
   - name:         Presentations
     url:          /presentations
+    top:	  true	  
+  - name:         Open-Source
+    url:          /open-source
     top:	  true	  
   - name:         Android
     url:          /android
