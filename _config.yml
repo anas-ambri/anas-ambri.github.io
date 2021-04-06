@@ -15,12 +15,6 @@ links:
   - name:         Open-Source
     url:          /open-source
     top:	  true	  
-  - name:         Android
-    url:          /android
-    top:	  true	  
-  - name:         iOS
-    url:          /ios
-    top:	  true	  
   - name:         Email
     url:          mailto:anas.ambri@gmail.com
     bottom:       true
